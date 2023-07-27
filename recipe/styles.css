@@ -61,3 +61,17 @@
         opacity: 1;
     }
 }
+
+@media (min-width:576px){
+    body {
+        margin:auto;
+        border: 10px solid #ffd000;
+    }
+}
+
+@media (min-width:1200px){
+    body {
+        margin:auto;
+        border: 10px solid #00ff7b;
+    }
+}
