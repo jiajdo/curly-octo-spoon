@@ -1,6 +1,6 @@
 const recipeTitle = document.getElementById("title");
-recipeTitle.style.color = "red";
+recipeTitle.style.color = "black";
 
-function changeTitleColor(){
-    recipeTitle.style.color = "black"
+function changeTitleColor() {
+    recipeTitle.style.color = "red"
 } 
