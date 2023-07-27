@@ -1,3 +1,3 @@
-const recipeTitle = document.getElementsByClassName("top");
-recipeTitle.style.color = "blue";
-body.appendChild(recipeTitle);
+const recipeTitle = document.getElementById("title");
+recipeTitle.style.color = "red";
+
