@@ -7,3 +7,9 @@ function changeTitleColor() {
     flag ? exampleStyle.color = "red" : exampleStyle.color = "black";
     flag = !flag;
 } 
+
+//Goodbye popup at the end of the page
+function popupFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
