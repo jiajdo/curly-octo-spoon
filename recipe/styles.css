@@ -76,21 +76,23 @@
     }
 }
 
-/* #recipepage {
-    background-color: #F0F0F1;
-    margin: 64px 64px 64px 64px;
-    padding: 10px;
-    border: 5px solid red;
-    overflow: auto;
-    box-shadow: 0 0 10px #777777;
-  } */
-  .roman {
-    font-family: 'Times New Roman';
-    
-  }
-  .opendyslexic {
-    font-family: 'opendyslexic';
-    src:url('http://dyslexicfonts.com/fonts/OpenDyslexic-Regular.otf');
-    
-    
+.dyslexia-mode {
+    letter-spacing: 0.35ch;
+    word-spacing: 1.225ch; /* 3.5x letter-spacing */
+    font-variant-ligatures: none; /* explicitly disable ligatures */
+    font-weight: 600; /* demi-bold */
+}
+
+/* limits dyslexia mode to main content and avoids headers and footers */
+.dyslexia-mode main {
+    line-height: 2.0;
+ }
+ 
+ .dyslexia-mode main p {
+    margin-top: 3.5em;
+ }
+
+ /* makes text darker to increase contrast and compensate for thinner ligatures*/
+ .dyslexia-mode strong {
+    color: #000;
   }

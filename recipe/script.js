@@ -14,12 +14,4 @@ function popupFunction() {
     popup.classList.toggle("show");
   }
 
-//change font to opendyslexia font
-function changeFont(){
-    const fon = document.getElementById("recipepage");
-    if (fon.className = "roman"){
-        fon.className = "opendyslexic";
-    }else {
-        fon.className = "roman";
-    }
-}
+
