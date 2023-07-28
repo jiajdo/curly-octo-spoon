@@ -62,37 +62,56 @@
     }
 }
 
-@media (min-width:576px){
+@media (min-width:576px) {
     body {
-        margin:auto;
+        margin: auto;
         border: 10px solid #ffd000;
     }
 }
 
-@media (min-width:1200px){
+@media (min-width:1200px) {
     body {
-        margin:auto;
+        margin: auto;
         border: 10px solid #00ff7b;
+    }
+}
+
+/*query for dyslexia mode*/
+@media(min-width:700px) {
+
+    /* only apply on wider screens... */
+    body:not(.dyslexia-mode) main {
+        /* ...if not in our friendly mode! */
+        background-image: url(https://res.cloudinary.com/jbowtie/image/upload/v1631662164/exclusive_paper_dyitgt.webp);
     }
 }
 
 .dyslexia-mode {
     letter-spacing: 0.35ch;
-    word-spacing: 1.225ch; /* 3.5x letter-spacing */
-    font-variant-ligatures: none; /* explicitly disable ligatures */
-    font-weight: 600; /* demi-bold */
+    word-spacing: 1.225ch;
+    /* 3.5x letter-spacing */
+    font-variant-ligatures: none;
+    /* explicitly disable ligatures */
+    font-weight: 600;
+    /* demi-bold */
+    font-size: 150%;
+    /* assuming 16px base size, convert to 18pt */
 }
 
 /* limits dyslexia mode to main content and avoids headers and footers */
 .dyslexia-mode main {
     line-height: 2.0;
- }
- 
- .dyslexia-mode main p {
-    margin-top: 3.5em;
- }
+}
 
- /* makes text darker to increase contrast and compensate for thinner ligatures*/
- .dyslexia-mode strong {
+.dyslexia-mode main p {
+    margin-top: 3.5em;
+}
+
+/* makes text darker to increase contrast and compensate for thinner ligatures*/
+.dyslexia-mode strong {
     color: #000;
-  }
+}
+
+.dyslexia-mode main li:nth-of-type(odd) {
+    background-color: palegoldenrod;
+}
