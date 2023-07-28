@@ -2,10 +2,10 @@
 .popup {
     position: relative;
     display: inline-block;
-    cursor: pointer;
-    ;
+    cursor: pointer;  
+    
 }
-/* &&&&&&&&&& */
+
 /* The actual popup (appears on top) */
 .popup .popuptext {
     visibility: hidden;

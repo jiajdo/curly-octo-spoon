@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+    </head>
     <body>
         <div class = "top">
-        <h1>Excellent No-Peel Egg Salad!</h1>
-
+        <button onclick="changeTitleColor()">Change title color</button>
+        <button id="dyslexia-toggle" type="button" aria-pressed="false">Dyslexia-friendly</button>
+        <h1 id="title">Excellent No-Peel Egg Salad!</h1>
         <div class = "left">
         <img src="https://static01.nyt.com/images/2016/03/21/dining/21COOKING_EGGSALADSAN1/21COOKING_EGGSALADSAN1-master768.jpg?w=1280&q=75" alt="egg salad sandwiches on a wooden cutting board" width="600px">
         <p>Photo credit: <a href = "https://cooking.nytimes.com/recipes/1013506-eli-zabars-egg-salad-sandwich">NYT Cooking</a></p>
@@ -53,5 +57,9 @@
         <p><b><a href = "https://www.spendwithpennies.com/classic-chicken-salad-recipe/">Chicken Salad</a></b></p>
         </div>
         </div>
+       <div class="popup" onclick="popupFunction()">Say bye!
+           <span class="popuptext" id="myPopup">Thanks for reading! Bye!</span>
+          </div>
     </body>
+    <script src="script.js">script.js</script>
 </html>
