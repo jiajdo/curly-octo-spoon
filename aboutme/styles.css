@@ -1,6 +1,6 @@
 body {
     background-image: url("https://images.pexels.com/photos/4046791/pexels-photo-4046791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    background-color: pink; 
+    background-color: rgb(3, 1, 20); 
     background-size: cover;
 }
 
@@ -13,12 +13,15 @@ body {
    display: block;
    margin-left: auto;
    margin-right: auto;
+   
 }
 
 .bio {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-
+    padding: 300px 300px;
+    background-color: white;
 }
