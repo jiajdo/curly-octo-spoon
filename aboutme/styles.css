@@ -1,3 +1,8 @@
+body {
+    background-image: url("https://images.pexels.com/photos/4046791/pexels-photo-4046791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-color: pink; 
+}
+
 .jiapic {
    height: 100px;
    width: 100px;
