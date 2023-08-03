@@ -16,23 +16,39 @@
         <section class="bio">
              <h1>About Jia</h1>
              <p>Nice to meet you! I'm a software engineer who combines the best parts of my creativity and logic into my work. 
-            With a background in customer service and nonprofit communications, my unique perspective keeps me in tune
-            with both users and fellow developers.
+             <p>With a background in customer service and nonprofit communications, my unique perspective keeps me in tune
+                with both users and fellow developers.</p>
 
             After training at Techtonica, I dove head-first into creating projects and sharpening my skills. 
             When I'm not coding, I love watercolor painting and hiking. 
             </p>
         </section>
     </div>
-    <div>
-        <section class="form">
+    <div class="form">
+        <section>
             <h2>Contact Me</h2>
+        </section>
             <form>
-                Name: 
-                <input type='text' name="username" required>
+                <section class="username">
+                    <label for="username"> Name: </label>
+                    <input type='text' name="username" required>
+                </section>
+                <br>
+                <br/>
+                <section>
+                <label for="email">Email:</label>
+                <input type='text' name="email" required>
+                </section>
+                <br>
+                <br/>
+                <section>
+                <label for="message">What's on your mind?</label>
+                <textarea rows="3" cols="40" required></textarea>
+                </section>
+                <br>
                 <br/>
             </form>
-        </section>
+       
     </div>
 
 <script src="script.js"></script>
