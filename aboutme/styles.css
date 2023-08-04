@@ -9,7 +9,6 @@ body {
 .jiapic {
    height: 300px;
    width: 300px;
-   border: 3px solid gray;
    border-radius: 50%;  
    display: block;
    margin-left: auto;
@@ -19,14 +18,12 @@ body {
 
 .bio {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* text-align: center;
-    display: block; */
     margin-left: auto;
     margin-right: auto;
     padding: 100px 100px;
     padding-left: 20em;
     padding-right: 20em;
-    background-color: white;
+    background-color:#FFEEE6;
     background-position: center;
 }
 
@@ -66,4 +63,13 @@ input[type=text]{
     position: relative;
     display: block;
     margin: 0 auto;
+}
+
+.github {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
