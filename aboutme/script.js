@@ -32,5 +32,7 @@ const formSubmit = document.getElementsByClassName('thankyou')[0];
 if (username && email){
     formSubmit.innerText = "Thanks for stopping by! I'll get back to you soon"
     formSubmit.style.color = "white"
+}else{
+    formSubmit.innerText = ""
 }
 })
