@@ -16,10 +16,8 @@
         <section class="bio">
              <h1 class="AboutJia">About Jia</h1>
              <p>Nice to meet you! I'm a software engineer who combines the best parts of my creativity and logic into my work. 
-             <p>With a background in customer service and nonprofit communications, my unique perspective keeps me in tune
-                with both users and fellow developers.</p>
-
-            After training at Techtonica, I dove head-first into creating projects and sharpening my skills. 
+             With a background in customer service and nonprofit communications, my unique perspective keeps me in tune
+                with both users and fellow developers. After training at Techtonica, I dove head-first into creating projects and sharpening my skills. 
             When I'm not coding, I love watercolor painting and hiking. 
             </p>
             <a href="github.com/jiajdo">
@@ -40,42 +38,42 @@
             <h2>Contact Me</h2>
         </section>
             <form>
-                <section class="username">
                     <label for="username"> Name: </label>
-                    <input type='text' name="username" required>
-                </section>
-                <br>
-                <br/>
+                    <input type='text' id="username" name="username" required>
+                    <br>
+                    <div class="error"></div>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type='text' name="email" id="email" required>
+                    <br>
+                    <div class="error"></div>
+                     <br>
+                     <br/>
                 <section>
-                <label for="email">Email:</label>
-                <input type='text' name="email" required>
+                    <label for="message">What's on your mind?</label>
+                    <br>
+                    <textarea rows="3" cols="40" required></textarea>
                 </section>
-                <br>
-                <br/>
-                <section>
-                <label for="message">What's on your mind?</label>
-                <br>
-                <textarea rows="3" cols="40" required></textarea>
-                </section>
-                <br>
-                <br/>
-                <label for="phone">Phone number:</label>
-                <input type="text" name="phone">
+                    <br>
+                    <br/>
+                    <label for="phone">Phone number:</label>
+                    <input type="text" name="phone">
                 <br/>
                 <div class="address">Address:</div>
-                <br>
-                <label for="streetname">Street name and number:</label>
-                <br/>
-                <input type="text" name="streetname">
-                <br>
-                <label for="city">City:</label>
-                <input type="text" name="city">
-                <br>
-                <label for="state">State:</label>
-                <input type="text" name="state">
-                <br>
-                <br/>
-                <input type="submit" value="Send" class="button">
+                    <br>
+                    <label for="streetname">Street name and number:</label>
+                    <br/>
+                    <input type="text" name="streetname">
+                    <br>
+                    <label for="city">City:</label>
+                    <input type="text" name="city">
+                    <br>
+                    <label for="state">State:</label>
+                    <input type="text" name="state">
+                    <br>
+                    <br/>
+                    <div class="thankyou"></div>
+                <input type="submit" value="Send" id="button" class="button">
             </form>
            
        
