@@ -1,0 +1,77 @@
+body {
+    background-image: url("https://images.pexels.com/photos/4046791/pexels-photo-4046791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-color: rgb(3, 1, 20); 
+    background-size: cover;
+
+}
+
+
+.jiapic {
+   height: 300px;
+   width: 300px;
+   border-radius: 50%;  
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   
+}
+
+.bio {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 100px;
+    padding-left: 20em;
+    padding-right: 20em;
+    background-color:#FFEEE6;
+    background-position: center;
+    text-align: center;
+    line-height: 2;
+}
+
+.form {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px 1px;
+    background-color: gray;
+}
+
+.pagelike {
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+.AboutJia {
+    text-align: center;
+}
+ .address {
+    font-weight: bold
+ }
+
+.button {
+    background-color: #FFEEE6;
+    font-weight: bold;
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=text]{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.logos {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
