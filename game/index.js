@@ -7,9 +7,10 @@ const snakeBody = [
 let lastRenderTime = 0
 let gameBoard
 let inputDirection = { x: 0, y: 0 }
-let lastInputDirection = { x:0, y:0 }
-let food = [{x: 10, y: 1}]
+let lastInputDirection = { x: 0, y: 0 }
+let food = [{ x: 10, y: 1 }]
 const expansion_rate = 1
+let newSegments = 0
 
 document.addEventListener('DOMContentLoaded', function () {
     gameBoard = document.getElementById('game-board')
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-   window.requestAnimationFrame(main)
+    window.requestAnimationFrame(main)
     window.addEventListener('keydown', e => {
         switch (e.key) {
             case 'ArrowUp':
@@ -53,19 +54,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 break
         }
     })
-function getInputDirection(){
-  lastInputDirection = inputDirection
-    return inputDirection
-}
+    function getInputDirection() {
+        lastInputDirection = inputDirection
+        return inputDirection
+    }
     function update() {
         for (let i = snakeBody.length - 2; i >= 0; i--) {
             snakeBody[i + 1] = { ...snakeBody[i] }
         }
-         snakeBody[0].x += inputDirection.x
-         snakeBody[0].y += inputDirection.y
-        if (onSnake(food)){
+        snakeBody[0].x += inputDirection.x
+        snakeBody[0].y += inputDirection.y
+        if (onSnake(food)) {
             expandSnake(expansion_rate)
-            food = {x: 20, y:10}
+            food.x = Math.floor(Math.random() * 21)
+            food.y = Math.floor(Math.random() * 21)
         }
     }
 
@@ -89,7 +91,20 @@ function getInputDirection(){
     }
     draw()
 
-    
+    function expandSnake(amount) {
+        newSegments += amount
+    }
+
+    function onSnake(position) {
+        return snakeBody.some(segment => {
+            return equalPositions(segment, position)
+        })
+    }
+
+    function equalPositions(pos1, pos2) {
+        return pos1.x === pos2.x && pos1.y === pos2.y
+    }
+
 })
 
 
