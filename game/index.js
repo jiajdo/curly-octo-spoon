@@ -8,6 +8,8 @@ let lastRenderTime = 0
 let gameBoard
 let inputDirection = { x: 0, y: 0 }
 let lastInputDirection = { x:0, y:0 }
+let food = [{x: 10, y: 1}]
+const expansion_rate = 1
 
 document.addEventListener('DOMContentLoaded', function () {
     gameBoard = document.getElementById('game-board')
@@ -61,6 +63,10 @@ function getInputDirection(){
         }
          snakeBody[0].x += inputDirection.x
          snakeBody[0].y += inputDirection.y
+        if (onSnake(food)){
+            expandSnake(expansion_rate)
+            food = {x: 20, y:10}
+        }
     }
 
 
@@ -73,8 +79,16 @@ function getInputDirection(){
             snakeElement.classList.add('snake')
             gameBoard.appendChild(snakeElement)
         })
+        food.forEach(food => {
+            const foodElement = document.createElement('div')
+            foodElement.style.gridRowStart = food.y
+            foodElement.style.gridColumnStart = food.x
+            foodElement.classList.add('food')
+            gameBoard.appendChild(foodElement)
+        })
     }
     draw()
+
     
 })
 
