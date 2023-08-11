@@ -11,6 +11,7 @@ let lastInputDirection = { x: 0, y: 0 }
 let food = [{ x: 18, y: 10 }]
 const expansion_rate = 1
 let newSegments = 0
+let gameOver = false
 
 document.addEventListener('DOMContentLoaded', function () {
     gameBoard = document.getElementById('game-board')
@@ -19,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function main(currentTime) {
     window.requestAnimationFrame(main)
+    if (gameOver) {
+        return alert('you lose')
+    }
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
     if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
 
@@ -123,7 +127,16 @@ function onSnake(position) {
 function equalPositions(pos1, pos2) {
     return pos1.x === pos2.x && pos1.y === pos2.y
 
+function outsideGrid(position){
+    return (
+        position.x < 1 || position.x > 21 ||
+        position.y < 1 || position.y > 21
+    )
+}
 
+function checkDeath(){
+    gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
+}
 }
 
 
