@@ -14,7 +14,8 @@ let newSegments = 0
 
 document.addEventListener('DOMContentLoaded', function () {
     gameBoard = document.getElementById('game-board')
-
+    main()
+})
 
     function main(currentTime) {
         window.requestAnimationFrame(main)
@@ -64,10 +65,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         snakeBody[0].x += inputDirection.x
         snakeBody[0].y += inputDirection.y
-        if (onSnake(food)) {
+
+        for (let i = 0; i < newSegments; i++) {
+            snakeBody.push({ ...snakeBody[snakeBody.length - 1] });
+        }
+        newSegments = 0;
+
+        if (onSnake(food[0])) {
             expandSnake(expansion_rate)
-            food.x = Math.floor(Math.random() * 21)
-            food.y = Math.floor(Math.random() * 21)
+            food[0].x = Math.floor(Math.random() * 20);
+            food[0].y = Math.floor(Math.random() * 20);
         }
     }
 
@@ -89,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
             gameBoard.appendChild(foodElement)
         })
     }
-    draw()
+   // draw()
 
     function expandSnake(amount) {
         newSegments += amount
@@ -101,13 +108,13 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    function equalPositions(pos1, pos2) {
-        return pos1.x === pos2.x && pos1.y === pos2.y
-    }
-
-})
+    
 
 
+
+function equalPositions(pos1, pos2) {
+    return pos1.x === pos2.x && pos1.y === pos2.y
+}
 
 
 
