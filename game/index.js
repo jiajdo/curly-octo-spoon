@@ -26,29 +26,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-   // window.requestAnimationFrame(main)
+   window.requestAnimationFrame(main)
     window.addEventListener('keydown', e => {
         switch (e.key) {
             case 'ArrowUp':
                 if (lastInputDirection.y !== 0) break
                 inputDirection = { x: 0, y: -1 }
+                lastInputDirection = inputDirection
                 break
             case 'ArrowDown':
                 if (lastInputDirection.y !== 0) break
                 inputDirection = { x: 0, y: 1 }
+                lastInputDirection = inputDirection
                 break
             case 'ArrowLeft':
                 if (lastInputDirection.x !== 0) break
                 inputDirection = { x: -1, y: 0 }
+                lastInputDirection = inputDirection
                 break
             case 'ArrowRight':
                 if (lastInputDirection.x !== 0) break
                 inputDirection = { x: 1, y: 0 }
+                lastInputDirection = inputDirection
                 break
         }
     })
 function getInputDirection(){
-    lastInputDirection = inputDirection
+  lastInputDirection = inputDirection
     return inputDirection
 }
     function update() {
