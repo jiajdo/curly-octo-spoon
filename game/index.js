@@ -1,5 +1,9 @@
 let SNAKE_SPEED = 2
-let snakeBody = [{x:11, y:11}]
+const snakeBody = [
+    {x:10, y:11},
+    {x:11, y:11},
+    
+]
 let lastRenderTime = 0
 let gameBoard 
 
@@ -26,9 +30,6 @@ function update(){
  console.log('update snake')
 }
 
-draw()
-
-})
 
 function draw(){
 
@@ -40,6 +41,10 @@ function draw(){
        gameBoard.appendChild(snakeElement)
     })
    }
+   draw()
+})
+
+
 
 
 
